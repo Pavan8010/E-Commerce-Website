@@ -1,5 +1,5 @@
 
-## Follow the 3 Steps and you are good to go. 
+## Follow the 3 Steps to get run in your pc
 
 1: Clone the Project 
 
