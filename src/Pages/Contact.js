@@ -5,6 +5,7 @@ const Contact = () => {
     <Wrapper>
       <h2 className="common-heading">Contact Page</h2>
       <iframe
+        title="common-heading"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8989338414235!2d77.28965652487467!3d19.112089182099943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bce29b9903d053d%3A0x2c5238a90ab55c03!2sShri%20Guru%20Gobind%20Singhji%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1688394449260!5m2!1sen!2sin"
         width="100%"
         height="400"
