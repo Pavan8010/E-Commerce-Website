@@ -8,18 +8,19 @@ import { Container } from "../styles/Container";
 import FormatPrice from "../Helpers/FormatPrice";
 import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
+import Stars from "../components/Stars";
+import AddToCart from "../components/AddToCart";
 
-// const API = "https://api.pujakaitem.com/api/products";
-const API = "http://localhost:4000/products";
+const API = "https://api.pujakaitem.com/api/products";
+// const API = "http://localhost:4000/products";
 
 const SingleProduct = () => {
-  const { getSingleProduct, isSingleLoading, singleProduct } =
-    useProductContext();
-
+  const { getSingleProduct, isSingleLoading, singleProduct } = useProductContext();
+  
   const { id } = useParams();
-
+  
   const {
-    // id: alias,
+    id: alias,
     name,
     company,
     price,
@@ -30,10 +31,11 @@ const SingleProduct = () => {
     reviews,
     image,
   } = singleProduct;
-
+  // console.log(`${API}?id=${id}`);
+  
   useEffect(() => {
     getSingleProduct(`${API}?id=${id}`);
-  }, [getSingleProduct,id]);
+  }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
   if (isSingleLoading) {
     return <div className="page_loading">Loading.....</div>;
@@ -41,9 +43,10 @@ const SingleProduct = () => {
 
   return (
     <Wrapper>
+      {/* <h1>Single Page {name} </h1> */}
       <PageNavigation title={name} />
       <Container className="container">
-        <div className="grid grid-two-column">
+        <div className="grid grid-two-column"> 
           {/* product Images  */}
           <div className="product_images">
             <MyImage imgs={image} />
@@ -52,8 +55,7 @@ const SingleProduct = () => {
           {/* product data  */}
           <div className="product-data">
             <h2>{name}</h2>
-            <p>{stars}</p>
-            <p>{reviews} reviews</p>
+            <Stars stars = {stars} reviews={reviews} />
             <p className="product-data-price">
               MRP:
               <del>
@@ -77,7 +79,7 @@ const SingleProduct = () => {
 
               <div className="product-warranty-data">
                 <TbTruckDelivery className="warranty-icon" />
-                <p>Thapa Delivered </p>
+                <p>Free Delivary</p>
               </div>
 
               <div className="product-warranty-data">
@@ -89,28 +91,33 @@ const SingleProduct = () => {
             <div className="product-data-info">
               <p>
                 Available:
-                <span> {stock > 0 ? "In Stock" : "Not Available"}</span>
+                <span style={{color: "red"}}> {stock > 0 ? "In Stock" : "Not Available"}</span>
               </p>
-              <p>
+              {/* <p>
                 ID : <span> {id} </span>
-              </p>
+              </p> */}
               <p>
                 Brand :<span> {company} </span>
               </p>
             </div>
+            <hr />
+            {stock > 0 && <AddToCart product ={singleProduct} />}
           </div>
         </div>
-      </Container>
+      </Container> 
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
+  
   .container {
     padding: 9rem 0;
   }
 
   .product_images {
+    width: 100%;
+    border: black 2px solid;
     display: flex;
     align-items: center;
   }
