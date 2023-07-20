@@ -1,27 +1,53 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FaCheck } from 'react-icons/fa';
 import styled from 'styled-components';
+import CartAmountToggle from './CartAmountToggle';
+import { NavLink } from 'react-router-dom';
+import {Button} from '../styles/Button';
+import { useCartContext } from '../context/cart_context';
 
 const AddToCart = ({product}) => { 
+
+  const {addToCart} = useCartContext();
   const {id,colors,stock} = product;
   const[color,setColor] = useState(colors[0]);
+  const[amount,setAmount] = useState(1);
+
+  const setDecrease = ()=>{
+    amount > 1 ? setAmount(amount-1) : setAmount(1);
+  }
+  const setIncrease = ()=>{
+    amount < stock ? setAmount(amount+1) : setAmount(stock);
+  }
+
   return <Wrapper>
     <div className="colors">
-      <p>
-        Colors:
-        {colors.map((curColour,index)=>{
-          return <button 
-                  key={index} 
-                  style={{backgroundColor:curColour}}
-                  className={color === curColour ? "btnStyle active" : "btnsStyle"}
-                  onClick={()=>{setColor(curColour)}}
-                  >
-                  {/* {color === curColour ? <FaCheck className="checkStyle"/> : null} */}
-                  {curColour}
-                  </button>
-        })}
-      </p>
+    <p>
+      Color:
+      {colors.map((curColor, index) => {
+        return (
+          <button
+            key={index}
+            style={{ backgroundColor: curColor }}
+            className={color === curColor ? "btnStyle active" : "btnStyle"}
+            onClick={() => setColor(curColor)}>
+            {color === curColor ? <FaCheck className="checkStyle" /> : null}
+          </button>
+        );
+      })}
+    </p>
     </div>
+    {/* add to cart */}
+    <CartAmountToggle
+      amount={amount}
+      setDecrease={setDecrease}
+      setIncrease={setIncrease}
+    />
+
+    <NavLink to='/cart' onClick={()=> addToCart(id,color,amount,product)}>
+      <Button className='btn'>Add to Cart</Button>
+    </NavLink>
+
   </Wrapper>
 }
 const Wrapper = styled.section`

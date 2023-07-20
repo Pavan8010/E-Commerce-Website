@@ -168,7 +168,7 @@ const Nav = () => {
           <li>
             <NavLink
               to="/"
-              className="navbar-link "
+              className="navbar-link"
               onClick={() => setMenuIcon(false)}>
               Home
             </NavLink>

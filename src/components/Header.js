@@ -8,6 +8,7 @@ const Header = () => {
     <MainHeader>
       <NavLink to="/">
         <img src="./images/logo.png" alt="my logo img" />
+        {/* <img src="../logo_extra.jpg" alt="my logo img" /> */}
       </NavLink>
       <Nav />
     </MainHeader>
