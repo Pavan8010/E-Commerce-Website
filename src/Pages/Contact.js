@@ -26,7 +26,7 @@ const Contact = () => {
               type="text"
               placeholder="username"
               name="username"
-              autocomplete="off"
+              autoComplete="off"
               required
               // value=""
             />
