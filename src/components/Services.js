@@ -33,7 +33,7 @@ const Services = () => {
           <div className="services-3">
             <div>
               <RiSecurePaymentLine className="icon"/>
-              <h3>100% Secure Payment</h3>
+              <h3>100% Secure Payments</h3>
             </div>
           </div>      
 

@@ -6,7 +6,7 @@ const Stars = ({stars,reviews}) => {
         // arr = [0,1,2,3,4]
         const number = index + 0.5;
         return (
-            // i=0,i=1,i=2,i=3,i=4
+            // i=0,i=1,i=2,i=3,i=4,
             <span key={index}>
                 {stars >= index + 1 ? (
                   <FaStar className="icon" />

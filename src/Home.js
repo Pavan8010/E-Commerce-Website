@@ -5,14 +5,18 @@ import Services from "./components/Services";
 import FeatureProduct from "./components/FeatureProduct";
 const Home = () => {
   const data = {
-    name: "thapa store",
+    name: "Ecom store",
   };
 
   return <>
     <HeroSection myData={data} />
+    {/* <hr style={{width:"100%"}} /> */}
     <Services />
+    {/* <hr /> */}
     <FeatureProduct/>
+    {/* <hr /> */}
     <Trusted />
+    {/* <hr /> */}
   </>
 };
 

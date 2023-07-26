@@ -8,7 +8,7 @@ function ErrorPage() {
     <Wrapper>
       <div className="container">
         <h2>Error 404</h2>
-        <h3>UH OH!You`re Lost</h3>
+        <h3>UH OH! You`re Lost</h3>
         <p>The page you are looking for does not exist. How you got here is a
             mystery. But you can click the button below to go back to the
             homepage.</p>

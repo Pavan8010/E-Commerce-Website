@@ -19,7 +19,7 @@ const FilterSection = () => {
       return (newVal = ["all", ...new Set([].concat(...newVal))]);
       // return newVal.flat();
     }else{
-      return (newVal = ["all" , ...new Set(newVal)]);
+      return(newVal = ["all" , ...new Set(newVal)]);
     }
     
     // console.log(newVal);

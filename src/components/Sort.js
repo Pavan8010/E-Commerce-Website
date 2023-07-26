@@ -39,6 +39,7 @@ const Sort = () => {
               className="sort-selection--style" 
               onChange={sorting}
             >
+              
               <option value="lowest">Price(lowest)</option>
               <option value="#" disabled></option>
               <option value="highest">Price(highest)</option>

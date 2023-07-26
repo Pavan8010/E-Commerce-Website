@@ -5,22 +5,28 @@ const Trusted = () => {
     <Wrapper className="brand-section">
       <div className="container">
         <h3>Trusted by 1000+ Companies</h3>
-        <div className="brand-section-slider">
-          <div className="slide">
+        <div className="brand-section-slider" style={{mixBlendMode: "darken"}}>
+          <div className="slide" >
             <img
               src="./Company/visa.png"
               alt="trusted-brands"
             />
           </div>
-          <div className="slide">
+          {/* <div className="slide">
             <img
               src="./Company/paypal.png"
+              alt="trusted-brands"
+            />
+          </div> */}
+          <div className="slider">
+            <img
+              src="./Company/dhl.png"
               alt="trusted-brands"
             />
           </div>
           <div className="slider">
             <img
-              src="./Company/dhl.png"
+              src="./Company/Adidas.png"
               alt="trusted-brands"
             />
           </div>
@@ -30,9 +36,15 @@ const Trusted = () => {
               alt="trusted-brands"
             />
           </div>
-          <div className="slider">
+          {/* <div className="slider">
             <img
               src="./Company/american-express.png"
+              alt="trusted-brands"
+            />
+          </div> */}
+          <div className="slider">
+            <img
+              src="./Company/Nike.png"
               alt="trusted-brands"
             />
           </div>

@@ -12,7 +12,7 @@ const Cart = () => {
   // if(cart === []){
     return (
       <EmptyDiv>
-        <h3>No Item in Cart </h3>
+        <h3>No Item in the Cart </h3>
       </EmptyDiv>
     )
   }

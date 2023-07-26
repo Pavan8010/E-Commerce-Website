@@ -9,7 +9,7 @@ const Product = (curElem) => {
       <div className="card">
         <figure>
           <img src={image} alt={name} />
-          <figcaption className="caption">{category}</figcaption>
+          <figcaption className="caption"> {category} </figcaption>
         </figure>
 
         <div className="card-data">

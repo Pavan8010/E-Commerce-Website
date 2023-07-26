@@ -9,7 +9,7 @@ const Products = () => {
   return <Wrapper>
       <div className="container grid grid-filter-column">
         <div>
-          <FilterSection />
+          <FilterSection/>
         </div>
 
         <section className="product-view--sort">

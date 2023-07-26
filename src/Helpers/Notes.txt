@@ -1,4 +1,5 @@
 Context API => what opearation we have to perform and to perform it which data we required
 
-useReducer Hook => what it calls function and  then how function should work 
+useReducer Hook => what it calls function and  then how function should work.
+
 

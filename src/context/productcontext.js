@@ -33,7 +33,7 @@ const AppProvider = ({ children }) => {
       dispatch({ type: "API_ERROR" });
     }
   };
-   const getSingleProduct = async (url) => {
+  const getSingleProduct = async (url) => {
     dispatch({ type:"SET_SINGLE_LOADING" });
     try {
       const res = await axios.get(url);
@@ -43,7 +43,7 @@ const AppProvider = ({ children }) => {
     } catch (error) {
       dispatch({ type: "SET_SINGLE_ERROR" });
     }
-   }
+  }
   useEffect(() => {
     getProducts(API);
   }, []);

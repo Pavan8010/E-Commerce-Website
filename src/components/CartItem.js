@@ -50,9 +50,7 @@ const CartItem = ({id,name,image,color,price,amount}) => {
 
       {/* fourth column */}
       <div className="cart-hide">
-        <p>
-            <FormatPrice price={price*amount}/>
-        </p>
+        <p><FormatPrice price={price*amount}/></p>
       </div>
 
       {/* fifth column */}

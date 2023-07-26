@@ -8,6 +8,7 @@ import { Container } from "../styles/Container";
 import FormatPrice from "../Helpers/FormatPrice";
 import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
+import { GiTakeMyMoney } from "react-icons/gi";
 import Stars from "../components/Stars";
 import AddToCart from "../components/AddToCart";
 
@@ -78,8 +79,8 @@ const SingleProduct = () => {
               </div>
 
               <div className="product-warranty-data">
-                <TbTruckDelivery className="warranty-icon" />
-                <p>Free Delivary</p>
+                <GiTakeMyMoney className="warranty-icon" />
+                <p>Cash On Delivery</p>
               </div>
 
               <div className="product-warranty-data">

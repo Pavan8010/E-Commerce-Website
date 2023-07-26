@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Button } from "../styles/Button";
 
 const HeroSection = ({ myData }) => {
-  const {name} = myData;
+  const { name } = myData;
 
   return (
     <Wrapper>
@@ -13,13 +13,15 @@ const HeroSection = ({ myData }) => {
             <p className="intro-data">Welcome to </p>
             <h1> {name} </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-              atque temporibus veniam doloribus libero ad error omnis voluptates
-              animi! Suscipit sapiente.
+              We Provide You with a variety of products at the best prices by
+              linking you to the best sellers in the market and providing you
+              with the best offers and discounts. We also provide Super Value
+              Deals On All Product Details With Less Shipping Fee And Easy
+              Return Policy. Shop Now!
             </p>
-            <NavLink to="/" >
+            <NavLink to="/products">
               <Button>show now</Button>
-            </NavLink >
+            </NavLink>
           </div>
           {/* our homepage image  */}
           <div className="hero-section-image">
@@ -44,7 +46,9 @@ const Wrapper = styled.section`
     min-width: 10rem;
     height: 10rem;
   }
-
+  .intro-data{
+    font-size: 2rem;
+  }
   .hero-section-data {
     p {
       margin: 2rem 0;

@@ -127,6 +127,7 @@ const filterReducer = (state,action)=>{
         filter_products: tempFilterProducts,
     };
     
+    
     case "CLEAR_FILTERS":
       return {
         ...state,

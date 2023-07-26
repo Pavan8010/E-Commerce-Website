@@ -7,8 +7,8 @@ const Header = () => {
   return (
     <MainHeader>
       <NavLink to="/">
-        <img src="./images/logo.png" alt="my logo img" />
-        {/* <img src="../logo_extra.jpg" alt="my logo img" /> */}
+        {/* <img src="./images/logo.png" alt="my logo img" /> */}
+        <img src="../logo_extra.jpg" alt="my logo img" style={{mixBlendMode: "darken"}}/>
       </NavLink>
       <Nav />
     </MainHeader>
@@ -23,7 +23,7 @@ const MainHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   position: relative;
-
+  // mix-blend-mode: difference;
   .logo {
     height: 5rem;
   }

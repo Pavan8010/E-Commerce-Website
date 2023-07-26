@@ -33,7 +33,7 @@ const Contact = () => {
             <input 
               type="email" 
               name="Email" 
-              placeholder="Email Address"
+              placeholder="E-mail Address"
               autoComplete="off"
               required
               // value="" 
