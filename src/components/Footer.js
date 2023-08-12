@@ -25,7 +25,7 @@ const Footer = () => {
 
         <div className="container grid grid-four-column">
           <div className="footer-about">
-            <h3>Pavan Pabitwar</h3>
+            <h3>Pavan Narayan Pabitwar</h3>
             <p>
               This Ecom Website is seamless user-friendly online shop with secure
               transactions and smooth navigation.
