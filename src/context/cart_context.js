@@ -18,6 +18,7 @@ const getLocalCartData = () => {
   else{
     return parsedData;
   }
+};
 
 const initialState = {
   cart : getLocalCartData(),
