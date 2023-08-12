@@ -4,15 +4,20 @@ import reducer from "../reducer/cartReducer";
 const CartContext = createContext();
 
 const getLocalCartData = () => {
-  let localCartData = localStorage.getItem("Mycart");
-  const parsedData = JSON.parse(localCartData);
+  let parsedData = [];
+  try {
+    let localCartData = localStorage.getItem("Mycart");
+    const parsedData = JSON.parse(localCartData);
+  } catch (e) {
+    console.log(e);
+    // expected output: SyntaxError: Unexpected token o in JSON at position 1
+  }
   if(!Array.isArray(parsedData)){
     return [];
   }
   else{
     return parsedData;
   }
-};
 
 const initialState = {
   cart : getLocalCartData(),
